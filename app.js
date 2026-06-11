@@ -104,6 +104,41 @@ const games = [
   { id: "online", title: "連線對戰", render: onlineBattleGame }
 ];
 
+const themeVars = {
+  neon: ["#090417", "#101827", "#111827", "#edf2ff", "#9fb0ff", "#334155", "#d946ef", "#a21caf", "#22d3ee", "#0891b2"],
+  forest: ["#0f1f17", "#fbfff8", "#f1f8ed", "#203528", "#607568", "#cfe2d2", "#2f7d46", "#256339", "#65a30d", "#4d7c0f"],
+  candy: ["#241528", "#fff7fb", "#fff2f7", "#382335", "#8c607c", "#f5c7dc", "#ec4899", "#be185d", "#06b6d4", "#0891b2"],
+  ocean: ["#071b2f", "#f2fbff", "#e5f5ff", "#18324a", "#52738f", "#b9d7e8", "#0284c7", "#0369a1", "#14b8a6", "#0f766e"],
+  sunset: ["#22131c", "#fff8f0", "#ffeddf", "#3e2a26", "#8f6659", "#f2c7ae", "#f97316", "#c2410c", "#eab308", "#a16207"],
+  cyber: ["#05070d", "#111827", "#0b1220", "#f8fafc", "#c4b36a", "#374151", "#facc15", "#ca8a04", "#38bdf8", "#0284c7"],
+  midnight: ["#120b22", "#f7f3ff", "#eee7ff", "#2f2444", "#746190", "#d7c8f0", "#7c3aed", "#5b21b6", "#a78bfa", "#6d28d9"],
+  ice: ["#10202b", "#f8fdff", "#edf8ff", "#203241", "#658296", "#c7e2ee", "#38bdf8", "#0284c7", "#67e8f9", "#0891b2"],
+  lava: ["#180608", "#fff5f4", "#ffe6e2", "#3f1f1b", "#8b5550", "#f1b3ab", "#dc2626", "#991b1b", "#fb923c", "#c2410c"],
+  royal: ["#08142f", "#f8fbff", "#eef4ff", "#1c2f52", "#637699", "#cbd8f0", "#1d4ed8", "#1e3a8a", "#d4a017", "#a16207"],
+  mint: ["#0b201a", "#f3fff9", "#e6fff3", "#1e3a31", "#5c7d70", "#b9ead5", "#059669", "#047857", "#2dd4bf", "#0f766e"],
+  mono: ["#111111", "#ffffff", "#f2f2f2", "#202020", "#707070", "#d4d4d4", "#333333", "#111111", "#666666", "#444444"],
+  sakura: ["#251620", "#fff8fb", "#ffeef5", "#3d2835", "#926a7d", "#f3c7d8", "#f472b6", "#db2777", "#fb7185", "#e11d48"],
+  arcade: ["#07111f", "#fffdf4", "#fff2b8", "#202338", "#6f5b8f", "#eadc82", "#7c3aed", "#5b21b6", "#22c55e", "#15803d"],
+  desert: ["#21170e", "#fffaf0", "#f9edcf", "#3a2d1d", "#8a7555", "#dcc99f", "#b45309", "#92400e", "#84cc16", "#4d7c0f"],
+  storm: ["#0f172a", "#f1f5f9", "#e2e8f0", "#243041", "#64748b", "#cbd5e1", "#475569", "#334155", "#0ea5e9", "#0369a1"],
+  galaxy: ["#09051a", "#f8f7ff", "#eeeaff", "#2b2548", "#7468a3", "#d8cff7", "#8b5cf6", "#6d28d9", "#06b6d4", "#0891b2"],
+  matrix: ["#020806", "#07130f", "#0b1f18", "#dcffe9", "#7ddf9b", "#195b37", "#22c55e", "#16a34a", "#a3e635", "#65a30d"],
+  coffee: ["#1e1510", "#fff8f1", "#f4e5d4", "#3b2a20", "#806756", "#d8bea8", "#8b5e34", "#6f4518", "#c08457", "#9a5f2b"]
+};
+
+const themeVarNames = ["--bg", "--surface", "--card", "--ink", "--muted", "--line", "--indigo", "--indigo-dark", "--emerald", "--emerald-dark"];
+
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  if (!themeVars[theme]) {
+    themeVarNames.forEach((name) => document.body.style.removeProperty(name));
+    return;
+  }
+  themeVarNames.forEach((name, index) => {
+    document.body.style.setProperty(name, themeVars[theme][index]);
+  });
+}
+
 function readUsers() {
   const saved = JSON.parse(localStorage.getItem(USERS_KEY) || "[]");
   const hasAdmin = saved.some((user) => user.email === ADMIN_EMAIL || user.account === ADMIN_EMAIL);
@@ -506,9 +541,9 @@ function ensureThemeControls() {
   const select = themePanel.querySelector("#themeSelect");
   const savedTheme = localStorage.getItem("iian666_theme") || "classic";
   select.value = savedTheme;
-  document.body.dataset.theme = savedTheme;
+  applyTheme(savedTheme);
   select.addEventListener("change", () => {
-    document.body.dataset.theme = select.value;
+    applyTheme(select.value);
     localStorage.setItem("iian666_theme", select.value);
   });
 }
