@@ -484,6 +484,22 @@ function ensureThemeControls() {
       <option value="neon">霓虹電競</option>
       <option value="forest">森林綠光</option>
       <option value="candy">糖果亮色</option>
+      <option value="ocean">深海藍潮</option>
+      <option value="sunset">夕陽橘光</option>
+      <option value="cyber">賽博黑金</option>
+      <option value="midnight">午夜紫影</option>
+      <option value="ice">冰晶冷光</option>
+      <option value="lava">熔岩紅黑</option>
+      <option value="royal">皇家藍金</option>
+      <option value="mint">薄荷清爽</option>
+      <option value="mono">黑白極簡</option>
+      <option value="sakura">櫻花粉雪</option>
+      <option value="arcade">復古街機</option>
+      <option value="desert">沙漠日光</option>
+      <option value="storm">雷雨灰藍</option>
+      <option value="galaxy">銀河星雲</option>
+      <option value="matrix">矩陣綠碼</option>
+      <option value="coffee">咖啡暖色</option>
     </select>
   `;
   sidebar.insertBefore(themePanel, logoutBtn);
@@ -1384,9 +1400,8 @@ function spaceShooterGame(root) {
           updateHighScore("space", score, info.querySelector("#spaceBest"));
         }
       });
-      if (!enemy.dead && enemy.y + enemy.r >= canvas.height) {
+      if (!enemy.dead && enemy.y > canvas.height + 20) {
         enemy.dead = true;
-        lives = Math.max(0, lives - 1);
       }
       if (!enemy.dead && Math.abs(enemy.x - player.x) < 34 && Math.abs(enemy.y - player.y) < 28) {
         enemy.dead = true;
@@ -1401,8 +1416,6 @@ function spaceShooterGame(root) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "#0f172a";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#ef4444";
-    ctx.fillRect(0, canvas.height - 4, canvas.width, 4);
     ctx.fillStyle = "#f8fafc";
     bullets.forEach((b) => ctx.fillRect(b.x - 2, b.y - 10, 4, 16));
     ctx.fillStyle = "#10b981";
