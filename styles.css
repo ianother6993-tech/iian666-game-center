@@ -680,9 +680,233 @@ body[data-theme="candy"] {
   --emerald-dark: #0891b2;
 }
 
+body[data-theme="ocean"] {
+  --bg: #071b2f;
+  --surface: #f2fbff;
+  --card: #e5f5ff;
+  --ink: #18324a;
+  --muted: #52738f;
+  --line: #b9d7e8;
+  --indigo: #0284c7;
+  --indigo-dark: #0369a1;
+  --emerald: #14b8a6;
+  --emerald-dark: #0f766e;
+}
+
+body[data-theme="sunset"] {
+  --bg: #22131c;
+  --surface: #fff8f0;
+  --card: #ffeddf;
+  --ink: #3e2a26;
+  --muted: #8f6659;
+  --line: #f2c7ae;
+  --indigo: #f97316;
+  --indigo-dark: #c2410c;
+  --emerald: #eab308;
+  --emerald-dark: #a16207;
+}
+
+body[data-theme="cyber"] {
+  --bg: #05070d;
+  --surface: #111827;
+  --card: #0b1220;
+  --ink: #f8fafc;
+  --muted: #c4b36a;
+  --line: #374151;
+  --indigo: #facc15;
+  --indigo-dark: #ca8a04;
+  --emerald: #38bdf8;
+  --emerald-dark: #0284c7;
+}
+
+body[data-theme="midnight"] {
+  --bg: #120b22;
+  --surface: #f7f3ff;
+  --card: #eee7ff;
+  --ink: #2f2444;
+  --muted: #746190;
+  --line: #d7c8f0;
+  --indigo: #7c3aed;
+  --indigo-dark: #5b21b6;
+  --emerald: #a78bfa;
+  --emerald-dark: #6d28d9;
+}
+
+body[data-theme="ice"] {
+  --bg: #10202b;
+  --surface: #f8fdff;
+  --card: #edf8ff;
+  --ink: #203241;
+  --muted: #658296;
+  --line: #c7e2ee;
+  --indigo: #38bdf8;
+  --indigo-dark: #0284c7;
+  --emerald: #67e8f9;
+  --emerald-dark: #0891b2;
+}
+
+body[data-theme="lava"] {
+  --bg: #180608;
+  --surface: #fff5f4;
+  --card: #ffe6e2;
+  --ink: #3f1f1b;
+  --muted: #8b5550;
+  --line: #f1b3ab;
+  --indigo: #dc2626;
+  --indigo-dark: #991b1b;
+  --emerald: #fb923c;
+  --emerald-dark: #c2410c;
+}
+
+body[data-theme="royal"] {
+  --bg: #08142f;
+  --surface: #f8fbff;
+  --card: #eef4ff;
+  --ink: #1c2f52;
+  --muted: #637699;
+  --line: #cbd8f0;
+  --indigo: #1d4ed8;
+  --indigo-dark: #1e3a8a;
+  --emerald: #d4a017;
+  --emerald-dark: #a16207;
+}
+
+body[data-theme="mint"] {
+  --bg: #0b201a;
+  --surface: #f3fff9;
+  --card: #e6fff3;
+  --ink: #1e3a31;
+  --muted: #5c7d70;
+  --line: #b9ead5;
+  --indigo: #059669;
+  --indigo-dark: #047857;
+  --emerald: #2dd4bf;
+  --emerald-dark: #0f766e;
+}
+
+body[data-theme="mono"] {
+  --bg: #111111;
+  --surface: #ffffff;
+  --card: #f2f2f2;
+  --ink: #202020;
+  --muted: #707070;
+  --line: #d4d4d4;
+  --indigo: #333333;
+  --indigo-dark: #111111;
+  --emerald: #666666;
+  --emerald-dark: #444444;
+}
+
+body[data-theme="sakura"] {
+  --bg: #251620;
+  --surface: #fff8fb;
+  --card: #ffeef5;
+  --ink: #3d2835;
+  --muted: #926a7d;
+  --line: #f3c7d8;
+  --indigo: #f472b6;
+  --indigo-dark: #db2777;
+  --emerald: #fb7185;
+  --emerald-dark: #e11d48;
+}
+
+body[data-theme="arcade"] {
+  --bg: #07111f;
+  --surface: #fffdf4;
+  --card: #fff2b8;
+  --ink: #202338;
+  --muted: #6f5b8f;
+  --line: #eadc82;
+  --indigo: #7c3aed;
+  --indigo-dark: #5b21b6;
+  --emerald: #22c55e;
+  --emerald-dark: #15803d;
+}
+
+body[data-theme="desert"] {
+  --bg: #21170e;
+  --surface: #fffaf0;
+  --card: #f9edcf;
+  --ink: #3a2d1d;
+  --muted: #8a7555;
+  --line: #dcc99f;
+  --indigo: #b45309;
+  --indigo-dark: #92400e;
+  --emerald: #84cc16;
+  --emerald-dark: #4d7c0f;
+}
+
+body[data-theme="storm"] {
+  --bg: #0f172a;
+  --surface: #f1f5f9;
+  --card: #e2e8f0;
+  --ink: #243041;
+  --muted: #64748b;
+  --line: #cbd5e1;
+  --indigo: #475569;
+  --indigo-dark: #334155;
+  --emerald: #0ea5e9;
+  --emerald-dark: #0369a1;
+}
+
+body[data-theme="galaxy"] {
+  --bg: #09051a;
+  --surface: #f8f7ff;
+  --card: #eeeaff;
+  --ink: #2b2548;
+  --muted: #7468a3;
+  --line: #d8cff7;
+  --indigo: #8b5cf6;
+  --indigo-dark: #6d28d9;
+  --emerald: #06b6d4;
+  --emerald-dark: #0891b2;
+}
+
+body[data-theme="matrix"] {
+  --bg: #020806;
+  --surface: #07130f;
+  --card: #0b1f18;
+  --ink: #dcffe9;
+  --muted: #7ddf9b;
+  --line: #195b37;
+  --indigo: #22c55e;
+  --indigo-dark: #16a34a;
+  --emerald: #a3e635;
+  --emerald-dark: #65a30d;
+}
+
+body[data-theme="coffee"] {
+  --bg: #1e1510;
+  --surface: #fff8f1;
+  --card: #f4e5d4;
+  --ink: #3b2a20;
+  --muted: #806756;
+  --line: #d8bea8;
+  --indigo: #8b5e34;
+  --indigo-dark: #6f4518;
+  --emerald: #c08457;
+  --emerald-dark: #9a5f2b;
+}
+
 body[data-theme="neon"] .sidebar,
 body[data-theme="forest"] .sidebar,
-body[data-theme="candy"] .sidebar {
+body[data-theme="candy"] .sidebar,
+body[data-theme="ocean"] .sidebar,
+body[data-theme="sunset"] .sidebar,
+body[data-theme="cyber"] .sidebar,
+body[data-theme="midnight"] .sidebar,
+body[data-theme="ice"] .sidebar,
+body[data-theme="lava"] .sidebar,
+body[data-theme="royal"] .sidebar,
+body[data-theme="mint"] .sidebar,
+body[data-theme="mono"] .sidebar,
+body[data-theme="sakura"] .sidebar,
+body[data-theme="arcade"] .sidebar,
+body[data-theme="desert"] .sidebar,
+body[data-theme="storm"] .sidebar,
+body[data-theme="galaxy"] .sidebar,
+body[data-theme="matrix"] .sidebar,
+body[data-theme="coffee"] .sidebar {
   background: color-mix(in srgb, var(--bg) 82%, #000 18%);
 }
 
